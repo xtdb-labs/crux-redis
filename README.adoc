@@ -1,0 +1,12 @@
+= crux-redis
+
+This project contains `RedisKv` which is an implementation of `kv/KvStore`,
+usable for remote index-store indexes (unlike RocksDB or LMDB which must be locally embedded in the Crux node).
+
+ALPHA - do not use in production.
+
+All tests are passing.
+
+Limited to <1 billion source triples due to 32-bit Redis single-node index limits. Limits are not tracked.
+
+For tests, see `/test/crux_redis/kv_test.clj`.
